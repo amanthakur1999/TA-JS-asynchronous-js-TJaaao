@@ -10,7 +10,7 @@ let btn = document.querySelector('.btn');
 function displayUI(data) {
   img.src = data.avatar_url;
   name.innerText = data.name;
-  companyName.innerText = data.login;
+  companyName.innerText = `@${data.login}`;
   followers.innerText = `Followers : ${data.followers}`;
   following.innerText = `Following :${data.following}`;
 }
@@ -39,8 +39,8 @@ function randomImgs(event) {
   );
   xhr1.onload = function () {
     let imgData = JSON.parse(xhr1.response);
-    console.log(imgData.url);
-    randomImg.src = imgData.url;
+    console.log(imgData[0].url);
+    randomImg.src = imgData[0].url;
   };
   xhr1.send();
 }

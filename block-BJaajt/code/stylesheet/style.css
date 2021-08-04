@@ -149,7 +149,7 @@ h1 {
   /* font-family: sans-serif; */
   font-size: 2rem;
 }
-img {
+.img {
   width: 150px;
   height: 150px;
   margin: 0 auto;
@@ -167,4 +167,16 @@ h2,
 li,
 p {
   padding-top: 0.8rem;
+}
+.img1 {
+  margin-top: 2rem;
+  width: 250px;
+  height: 400px;
+  /* margin: auto; */
+}
+.btn {
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
 }
