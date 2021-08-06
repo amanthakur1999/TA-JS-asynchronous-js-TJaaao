@@ -36,13 +36,16 @@ function createUI(data) {
     title.classList.add('title');
     title.innerText = elm.title;
 
+    let a = document.createElement('a');
+    a.href = elm.url;
     let readMore = document.createElement('button');
     readMore.classList.add('readMore');
+    a.append(readMore);
     readMore.innerText = 'Read More';
 
     ul.append(list);
     list.append(imageArtical, dataDiv);
-    dataDiv.append(chanel, title, readMore);
+    dataDiv.append(chanel, title, a);
   });
 }
 
