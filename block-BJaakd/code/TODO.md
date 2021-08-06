@@ -121,7 +121,23 @@ fetch();
 - Chain `.then` on above and return `4` also check the value you get access to by logging
 
 ```js
+let first = new Promise((res, rej) => {
+  res(1);
+});
 
+first
+  .then((value) => {
+    console.log(value);
+    return 2;
+  })
+  .then((value) => {
+    console.log(value);
+    return 3;
+  })
+  .then((value) => {
+    console.log(value);
+    return 4;
+  });
 ```
 
 9. Do the following:
@@ -159,4 +175,6 @@ return "Bran"
 
 
 }
+fetch();
+
 ```
