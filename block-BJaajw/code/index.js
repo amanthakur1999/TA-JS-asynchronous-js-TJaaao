@@ -7,7 +7,7 @@ let allNews = [];
 let isLoding = false;
 function handlerSpinner() {
   if (isLoding) {
-    ul.innerHTML = `<div  class = "error"> </div>`;
+    ul.innerHTML = `<div class="spiner"> <div  class = "donut"> </div</div>`;
   }
 }
 
