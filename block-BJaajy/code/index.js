@@ -5,7 +5,7 @@ let four = Promise.resolve(4);
 
 let all = Promise.all([one, two, three, four])
   .then((res) => console.log(res))
-  .catch((erro) => console.log(error));
+  .catch((error) => console.log(error));
 
 let usernames = [
   'getify',

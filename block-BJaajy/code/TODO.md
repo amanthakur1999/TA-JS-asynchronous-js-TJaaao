@@ -11,6 +11,18 @@ let all = Promise.all([one, two, three, four])
   .catch((erro) => console.log(error));
 ```
 
+```js
+let times = [1, 2, 3, 4];
+let timesPromise = times.map(
+  (second) =>
+    new Promise((res) => {
+      setTimeout(() => res(Math.random()), second * 1000);
+    })
+);
+
+Promise.all(timesPromise).then(console.log);
+```
+
 - Create a list of 5 Github usernames in an array and using `Promise.all` get access to the data of each user from GitHub API. Log the number of followers of each user.
 
 - Use `Promise.race` to see which API resolves faster from the given list of URLs. Log the object you get from the promise that is resolved faster.
